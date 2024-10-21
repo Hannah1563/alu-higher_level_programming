@@ -1,4 +1,4 @@
-#!/usr/bin/python3#
+#!/bin/bash
 Create the Python script
 echo print("Best School") > main.py 
 # Set the environment variable 
