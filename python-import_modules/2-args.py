@@ -9,6 +9,5 @@ if __name__ == "__main__":
     else:
         arg_word = "argument" if num_args == 1 else "arguments"
         print(f"{num_args} {arg_word}:")
-        
         for i in range(1, num_args + 1):
             print(f"{i}: {sys.argv[i]}")
