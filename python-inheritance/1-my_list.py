@@ -5,7 +5,7 @@ class MyList(list):
 
     def print_sorted(self):
         """
-        Prints the elements of the list in ascending order.
+        Prints the elements of the list in ascending order, without modifying the original list.
         """
         # Create a new sorted list (without modifying the original list)
         sorted_list = sorted(self)
