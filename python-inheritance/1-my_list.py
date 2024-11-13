@@ -1,12 +1,10 @@
+#!/usr/bin/python3
+"""MyList class"""
+
+
 class MyList(list):
-    """
-    A class that inherits from list and adds a method to print the list sorted.
-    """
+    """MyList class"""
 
     def print_sorted(self):
-        """
-        Prints the elements of the list in ascending order, without modifying the original list.
-        """
-        # Create a new sorted list (without modifying the original list)
-        sorted_list = sorted(self)
-        print(sorted_list)
+        """Prints the list, but sorted"""
+        print(sorted(self))
