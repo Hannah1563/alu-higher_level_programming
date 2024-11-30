@@ -3,8 +3,19 @@ import sys
 import requests
 
 """
-A script that uses GitHub API with Basic Authentication to fetch and display
+A script that uses the GitHub API with Basic Authentication to fetch and display
 the user ID for a specified GitHub username and personal access token.
+
+Usage:
+    ./10-my_github.py <username> <personal_access_token>
+
+Arguments:
+    username: GitHub username.
+    personal_access_token: GitHub personal access token with 'read:user' permission.
+
+Output:
+    The user ID associated with the provided GitHub username.
+    If authentication fails (wrong username or token), None is printed.
 """
 
 def main():
