@@ -1,33 +1,29 @@
 #!/usr/bin/python3
-import sys
+"""
+Script that takes URL and email as input, sends POST request using requests
+package, and displays the response body.
+"""
 import requests
+import sys
 
-"""
-A script that sends a POST request to a specified URL with an email as a parameter.
 
-Usage:
-    ./6-post_email.py <URL> <email>
+def post_email(url, email):
+    """
+    Send POST request to URL with email parameter and print response.
 
-Args:
-    URL: The URL where the POST request should be sent.
-    email: The email address to be sent as a parameter in the POST request.
-"""
+    Args:
+        url (str): The URL to send the POST request to
+        email (str): The email to be sent as a parameter
 
-def main():
-    # Get the URL and email from the command-line arguments
-    url = sys.argv[1]
-    email = sys.argv[2]
-
-    # Create a dictionary with the 'email' parameter
+    Returns:
+        None. Prints the response body to stdout.
+    """
     data = {'email': email}
-
-    # Send a POST request to the URL with the email parameter
     response = requests.post(url, data=data)
-
-    # Print the response body
     print(response.text)
 
 
 if __name__ == "__main__":
-    main()
-
+    url = sys.argv[1]
+    email = sys.argv[2]
+    post_email(url, email)
